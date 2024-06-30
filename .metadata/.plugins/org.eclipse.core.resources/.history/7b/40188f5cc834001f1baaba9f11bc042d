@@ -1,0 +1,22 @@
+package main;
+import io.restassured.RestAssured;
+import io.restassured.response.ValidatableResponse;
+
+import static io.restassured.RestAssured.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//given - all input details 
+		//when - Submit the API -resource,http method
+		//Then - validate the response
+		
+		
+		RestAssured.baseURI = "https://rahulshettyacademy.com";
+//		given().log().all().queryParam("key", "qaclick123", "place_id","7d43a94b14f06faa301df5283fd59119").header("Content-Type","application/json").when().get("maps/api/place/get/json").then().log().all().assertThat().statusCode(200);
+		
+		given().log().all().queryParam("key", "qaclick123", "place_id","7d43a94b14f06faa301df5283fd59119").header("Content-Type","application/json").when().log().all().get("maps/api/place/get/json?key=qaclick123&place_id=7d43a94b14f06faa301df5283fd59119").then().log().all();
+	}
+
+}

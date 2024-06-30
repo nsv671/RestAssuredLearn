@@ -1,0 +1,20 @@
+package main;
+import io.restassured.RestAssured;
+import io.restassured.response.ValidatableResponse;
+
+import static io.restassured.RestAssured.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RestAssured.baseURI = "https://rahulshettyacademy.com";
+		
+		String str = "{}";
+		
+		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
+		.body(str).when().post("maps/api/place/add/json")
+		.then().assertThat().statusCode(200);
+	}
+
+}
