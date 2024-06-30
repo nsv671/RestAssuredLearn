@@ -6,7 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="Print no of copies sold by RPA Course"/>
 		<list key="findhistory">
+			<item value="Print no of copies sold by RPA Course"/>
 			<item value="queryParams"/>
 		</list>
 		<list key="replacehistory">

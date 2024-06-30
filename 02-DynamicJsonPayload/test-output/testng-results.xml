@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-30T18:46:57 IST" name="Default suite" finished-at="2024-06-30T18:46:58 IST" duration-ms="1269">
+    <groups>
+    </groups>
+    <test started-at="2024-06-30T18:46:57 IST" name="Default test" finished-at="2024-06-30T18:46:58 IST" duration-ms="1269">
+      <class name="APItestingUsingExternalJSONfile">
+        <test-method signature="addBookUsingExternalJSONfile()[pri:0, instance:APItestingUsingExternalJSONfile@59309333]" started-at="2024-06-30T18:46:57 IST" name="addBookUsingExternalJSONfile" finished-at="2024-06-30T18:46:58 IST" duration-ms="1226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBookUsingExternalJSONfile -->
+      </class> <!-- APItestingUsingExternalJSONfile -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
