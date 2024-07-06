@@ -22,17 +22,22 @@ public class DynamicJson {
 		System.out.println(js.prettify());
 		System.out.println("*".repeat(50));
 		System.out.println("Message - "+js.get("Msg"));
-		System.out.println("Book id - "+js.get("ID"));
+		String bookID = js.get("ID");
+		System.out.println("Book id - "+bookID);
 		
 		//delete book
-		
-//		Dynamically build json payload with external data inputs
-//		Parameterize the API Tests with multiple data sets
-//		How to send static Json files(payload) directly into Post Method of Rest Assured I
+		String deleteResponseMessage = given().header("Content-Type", "application/json").body("{\"ID\":\""+bookID+"\"}")
+		.when().put("/Library/DeleteBook.php").then().log().all().assertThat().statusCode(200).extract().response().asString();
+		System.out.println("*".repeat(50));
+		System.out.println("Book id - "+bookID);
+		System.out.println("Delete response message - "+deleteResponseMessage);
+		JsonPath deleteJS = Utility.rawToJson(deleteResponseMessage);
+		System.out.println("*".repeat(50));
+		System.out.println(deleteJS.prettify());
 	}
 	
 	@DataProvider(name="bookDataProvider")
 	public Object[][] bookData(){
-		return new Object[][] {{"nsv", "111"}, {"snv", "222"}, {"vns", "333"}};
+		return new Object[][] {{"nsv", "000"},{"nsv", "111"},{"nsv", "222"},{"nsv", "333"}};
 	}
 }
